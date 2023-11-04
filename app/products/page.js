@@ -1,5 +1,6 @@
 "use client"
 import React, {useEffect, useState} from 'react';
+import Menu from "@/components/Menu";
 
 const Page = () => {
     const [data, setData] = useState([])
@@ -9,7 +10,7 @@ const Page = () => {
         (  async ()=>{
             let response = await fetch('https://dummyjson.com/products')
             let jsonData = await response.json();
-            setData(jsonData["csr"])
+            setData(jsonData["products"])
         })()
 
     },[])
@@ -19,18 +20,20 @@ const Page = () => {
 
     return (
         <div>
-            <h1 className="my-text">Products Page</h1>
+            <Menu/>
+            <h1 className="my-text">Products Page csr</h1>
+
             {
                 data.map((item, index)=>{
                     return(
                         <div key = {index}>
                             <table className="table">
-                                <tr className="th">
+                                <th className="th">
                                     <th className="td">ID </th>
                                     <th className="td">Title</th>
                                     <th className ="td">Description</th>
                                     <th className ="td">Image</th>
-                                </tr>
+                                </th>
                                 <tr className="th">
                                     <td className="td">{index}</td>
                                     <td className="td">{item['title']}</td>
@@ -43,9 +46,6 @@ const Page = () => {
 
                 })
             }
-
-
-
         </div>
     );
 };

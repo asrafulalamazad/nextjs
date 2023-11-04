@@ -1,3 +1,5 @@
+import Menu from "@/components/Menu";
+
 async function getData(){
     let response = await fetch('https://dummyjson.com/products')
     let jsonData = await response.json();
@@ -12,7 +14,8 @@ const Page = async () => {
 
     return (
         <div>
-            <h1 className="my-text">Products Page</h1>
+            <Menu/>
+            <h1 className="my-text">Products Page ssr </h1>
 
             {
                 data.map((item, index)=>{

@@ -1,10 +1,11 @@
 import React from 'react';
+import Menu from "@/components/Menu";
 
 const Page = () => {
     return (
         <div>
-          <h1>Welcome to Web Application with nextJS</h1>
-          <h1>{2+2}</h1>
+            <Menu/>
+          <h2>Profile Page</h2>
         </div>
     );
 };

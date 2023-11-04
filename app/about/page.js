@@ -1,10 +1,12 @@
 import React from 'react';
+import css from "../page.module.css"
+import Menu from "@/components/Menu";
 
 const Page = () => {
     return (
         <div>
-          <h1>Welcome to Web Application with nextJS</h1>
-          <h1>{2+2}</h1>
+            <Menu/>
+            <h2 className={css.myHeadline}>About Page</h2>
         </div>
     );
 };
