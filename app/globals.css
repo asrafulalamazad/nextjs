@@ -1,3 +1,10 @@
+.active-link{
+    color: red !important;
+}
+.pending-link{
+    color: green !important;
+}
+
 .my-text {
     color: red;
     text-align: center;
