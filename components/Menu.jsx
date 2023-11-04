@@ -15,7 +15,7 @@ const Menu = () => {
                 <Link  className={currentPath==="/about"?"active-link":"pending-link"} href={"/about"}>About</Link><br/>
                 <Link  className={currentPath==="/product"?"active-link":"pending-link"} href={"/product"}>Product</Link><br/>
                 <Link  className={currentPath==="/products"?"active-link":"pending-link"}
-                       href={{pathname:"/currentPath",query:{name:"book",price:"300"}}}>
+                       href={{pathname:"/products",query:{name:"book",price:"300"}}}>
                            Products</Link><br/>
                 <Link  className={currentPath==="/products/server-site"?"active-link":"pending-link"} href={"/products/server-site"}>Products</Link>
 

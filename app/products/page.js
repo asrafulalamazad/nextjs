@@ -2,7 +2,7 @@
 import React, {useEffect, useState} from 'react';
 import Menu from "@/components/Menu";
 
-const Page = () => {
+const Page = ({searchParams}) => {
     const [data, setData] = useState([])
 
     useEffect(()=>{
@@ -21,6 +21,8 @@ const Page = () => {
     return (
         <div>
             <Menu/>
+            <h1>{searchParams.name}</h1>
+            <h1>{searchParams.price}</h1>
             <h1 className="my-text">Products Page csr</h1>
 
             {
