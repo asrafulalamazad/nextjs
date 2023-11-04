@@ -1,4 +1,7 @@
+'use client'
 import Menu from "@/components/Menu";
+import {useSearchParams} from "next/navigation";
+
 
 async function getData(){
     let response = await fetch('https://dummyjson.com/products')
@@ -10,11 +13,13 @@ async function getData(){
 
 const Page = async () => {
      let data = await getData();
-
+    const params= useSearchParams()
 
     return (
         <div>
             <Menu/>
+            <h1>{params.get('name')}</h1>
+            <h1>{params.get('price')}</h1>
             <h1 className="my-text">Products Page ssr </h1>
 
             {

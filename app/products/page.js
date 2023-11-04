@@ -1,8 +1,11 @@
 "use client"
 import React, {useEffect, useState} from 'react';
 import Menu from "@/components/Menu";
+import { useSearchParams} from "next/navigation";
 
-const Page = ({searchParams}) => {
+// const Page = ({searchParams}) => {
+const Page = ({}) => {
+    const params= useSearchParams()
     const [data, setData] = useState([])
 
     useEffect(()=>{
@@ -21,8 +24,10 @@ const Page = ({searchParams}) => {
     return (
         <div>
             <Menu/>
-            <h1>{searchParams.name}</h1>
-            <h1>{searchParams.price}</h1>
+            <h1>{params.get('name')}</h1>
+            <h1>{params.get('price')}</h1>
+            {/*<h1>{searchParams.name}</h1>*/}
+            {/*<h1>{searchParams.price}</h1>*/}
             <h1 className="my-text">Products Page csr</h1>
 
             {
